@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Backbone Trial</title>
+</head>
+<div id="todo">
+    <input type='checkbox' />
+</div>
+<body>
+
+<script type="text/template" class="student-template">
+<ul>
+<% _.each( listItems, function( listItem ){ %>
+	<li>
+	<%- listItem.name %>
+	<% if ( listItem.mark >30 ){ %>
+		<em>Pass</em>
+	<% } else { %>
+		<em>Fail</em>
+	<%}%>
+	</li>
+<% }); %>
+</ul>
+</script>
+
+<script src="../lib/jquery-2.1.3.min.js"></script>
+<script src="../lib/underscore-min.js"></script>
+<script src="../lib/backbone-min.js"></script>
+<script src="viewEvent.js"></script>
+
+</body>
+</html>
